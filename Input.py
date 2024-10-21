@@ -1,2 +1,2 @@
-resposta=input("qual teu nome anta? ")
-print("olá, " +resposta)
+answer=input("What's your name? ")#Pergunta o Nome do Usuario
+print("Hello, " +answer)#diz Olá ao Usuario
