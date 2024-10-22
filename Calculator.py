@@ -1,9 +1,9 @@
-#pegar os números
-x = input("digite o primeiro número: ")
-y = input("digite o segundo número: ")
+#Get the Numbers
+x = input("Write the First Number: ")
+y = input("Write the Second Number: ")
 
-#calcula os números escolhidos
+#Calculates the chosen numbers
 z = int(x)+int(y)
 
-#resultado
-print(f"a soma de {x} + {y} = {z}")
+#Result
+print(f"The sum of {x} + {y} is {z}")
