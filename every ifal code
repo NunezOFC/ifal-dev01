@@ -1,0 +1,117 @@
+#Choose the Code
+def main():
+    print("--- Choice of Code ---")
+    print("1 for Calculators")
+    print("2 for Tellers")
+    print("3 for Hello/Goodbye")
+    code_choice = int(input("Choose your Code: "))
+    if code_choice == 1:
+        choice(code_choice)
+    if code_choice == 2:
+        choice(code_choice)
+
+def choice(code_choice):
+    if code_choice == 1:
+        print("1 for 5 Operaion Calculator")
+        print("2 for Square/Cube Calculator")
+        choice_code_2 = int(input("Choose your Code: "))
+        if choice_code_2 == 1:
+            calculator()
+        else:
+            square_number()
+    if code_choice == 2:
+        print("1 for House Teller")
+        print("2 for Grade Teller")
+        choice_code_2 = int(input("Choose your Code: "))
+        if choice_code_2 == 1:
+            character()
+
+#Calculator
+def calculator():
+   #Get the numbers
+    x = float(input("Write the x Number:"))
+    y = float(input("Write the y Number:"))
+
+    #Choice of Operation
+    print("Choose your Operation")
+    print("1 for Division")
+    print("2 for Abstraction")
+    print("3 for Multiplication")
+    print("4 for Sum")
+    print("5 for Exponenciation")
+    op = int(input("Write your Operation: "))
+    calculation(op, x, y)
+
+#Calculates the chosen numbers
+def calculation(op, x, y):
+    if op == 1:
+        z = (x)/(y)
+        z = f"{z:_.2f}"
+        z = z.replace(".", ",").replace("_",".")
+    elif op == 2:
+        z = (x)-(y)
+        z = f"{z:_.2f}"
+        z = z.replace(".", ",").replace("_",".")
+    elif op == 3:
+        z = (x)*(y)
+        z = f"{z:_.2f}"
+    elif op == 4:
+        z = (x)+(y)
+        z = f"{z:_.2f}"
+        z = z.replace(".", ",").replace("_",".")
+    elif op == 5:
+        z = (x)**(y)
+        z = f"{z:_.2f}"
+        z = z.replace(".", ",").replace("_",".")
+    result(op, x, y, z)
+
+#Result
+def result(op, x, y, z):
+    if op == 1:
+        print(f"The Division between x and y is {z}")
+    elif op == 2:
+        print(f"The Abstraction between x and y is {z}")
+    elif op == 3:
+        print(f"The Multiplication between x and y is {z}")
+    elif op == 4:
+        print(f"The Sum between x and y is {z}")
+    elif op == 5:
+        print(f"The Exponenciation between x and y is {z}")
+
+#square/cube number choice
+def square_number():
+    n = float(input("Write your number: "))
+    exponencion_choice = input("Choose the Cube or Square of the Number: ")
+    if exponencion_choice == "Cube":
+        cube_calculator(n)
+    else:
+        square_calculator(n)
+
+#square calculator
+def square_calculator(n):
+    print(f"the square of {n} is {n * n}")
+
+#cube calculator
+def cube_calculator(n):
+    print(f"the square of {n} is {n * n * n}")
+
+#Asks you about the Character   
+def character():
+    print("--- Harry Potter House Teller  ---")
+    character = str(input("Write a Harry Potter Character: "))
+    house_teller(character)
+
+#Verificates the Character house and informs it to the user
+def house_teller(character):
+    if  character == "Harry Potter" or "Harry" or "Hermione Granger" or "Hermione" or "Rony Weasley" or "Rony":
+     print(f"{character} is from Gryffindor")
+    elif character == "Draco Malfoy" or "Draco" or "Malfoy":
+       print(f"{character} is from Slytherin")
+    elif character == "Luna Lovegood" or "Luna":
+       print(f"{character} is from Ravenclaw")
+    elif character == "Cedric Diggory" or "Cedric" or "Diggory":
+       print(f"{character} is from Hufflepuff")
+    else:
+       print("No House Found")
+
+main()
