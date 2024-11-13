@@ -22,9 +22,14 @@ def choice(code_choice):
     if code_choice == 2:
         print("1 for House Teller")
         print("2 for Grade Teller")
+        print("3 for Pair Teller")
         choice_code_2 = int(input("Choose your Code: "))
         if choice_code_2 == 1:
             character()
+        elif choice_code_2 == 2:
+            grade()
+        elif choice_code_2 == 3:
+            pair()
 
 #Calculator
 def calculator():
@@ -97,21 +102,69 @@ def cube_calculator(n):
 
 #Asks you about the Character   
 def character():
-    print("--- Harry Potter House Teller  ---")
-    character = str(input("Write a Harry Potter Character: "))
+    print("--- Harry Potter House Teller ---")
+    character = input("Write a Harry Potter Character: ")
     house_teller(character)
 
-#Verificates the Character house and informs it to the user
+#Verifies and tells you the Character
 def house_teller(character):
-    if  character == "Harry Potter" or "Harry" or "Hermione Granger" or "Hermione" or "Rony Weasley" or "Rony":
-     print(f"{character} is from Gryffindor")
-    elif character == "Draco Malfoy" or "Draco" or "Malfoy":
-       print(f"{character} is from Slytherin")
-    elif character == "Luna Lovegood" or "Luna":
-       print(f"{character} is from Ravenclaw")
-    elif character == "Cedric Diggory" or "Cedric" or "Diggory":
-       print(f"{character} is from Hufflepuff")
+    match character.title():
+        case "Harry Potter"|"Harry"|"Potter"|"Rony"|"Weasley"|"Rony Weasley"|"Hermione Granger"|"Hermione":
+            print("This character is from Gryffindor")
+        case "Draco Malfoy"|"Draco"|"Malfoy":
+            print("This character is from Slytherin")
+        case "Luna Lovegood"|"Luna":
+            print("This character is from Ravenclaw")
+        case "Cedric Diggory"|"Cedric"|"Diggory":
+            print("This character is from Hufflepuff")
+        case _:
+            print("No House Found")
+
+#Asks you about your Grades
+def grade():
+    print("--- Tell us your Grades ---")
+    grades = int(input("Grades: "))
+    grade_teller(grades)
+
+#Tells you Your Grade
+def grade_teller(grades):
+    if  97 <= grades <= 100:
+        print("Your Grade is A+")
+    elif 93<= grades <= 96:
+        print("Your grade is A-")
+    elif 90 <= grades <= 92:
+        print("Your Grade is A")
+    elif 87 <= grades <= 89:
+        print("Your Grade is B+")
+    elif 83 <= grades <= 86:
+        print("Your Grade is B-")
+    elif 80 <=grades <= 82:
+        print("Your Grade is B")
+    elif 77 <=grades <= 79:
+        print("Your Grade is C+")
+    elif 73 <= grades <= 76:
+        print("Your Grade is C-")
+    elif 70 <= grades <= 72:
+        print("Your Grade is C")
+    elif 67 <= grades <= 69:
+        print("Your Grade is D+")
+    elif 63 <= grades <= 66:
+        print("Your Grade is D-")
+    elif 60 <= grades <= 62:
+        print("Your Grade is D")
     else:
-       print("No House Found")
+        print("Your Grade is F")
+
+#Asks you to write a Number
+def pair():
+    num = int(input("Write a Number: "))
+    if pair_calculator(num):
+        print("The number is Pair")
+    else:
+        print("The number is Unpaired")
+
+#Verifys if the number is Pair
+def pair_calculator(num):
+    return num % 2 == 0
 
 main()
