@@ -153,7 +153,7 @@ def grade_teller(grades):
     elif 60 <= grades <= 62:
         print("Your Grade is D")
     else:
-        print("Your Grade is F")
+        print("Your Grade is E/F")
 
 #Asks you to write a Number
 def pair():
