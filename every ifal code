@@ -9,6 +9,8 @@ def main():
         choice(code_choice)
     if code_choice == 2:
         choice(code_choice)
+    if code_choice == 3:
+        choice(code_choice)
 
 def choice(code_choice):
     if code_choice == 1:
@@ -19,7 +21,7 @@ def choice(code_choice):
             calculator()
         else:
             square_number()
-    if code_choice == 2:
+    elif code_choice == 2:
         print("1 for House Teller")
         print("2 for Grade Teller")
         print("3 for Pair Teller")
@@ -30,6 +32,21 @@ def choice(code_choice):
             grade()
         elif choice_code_2 == 3:
             pair()
+    elif code_choice == 3:
+        print("1 for Hello World")
+        print("2 for Goobye World")
+        print("3 for Input Name")
+        print("4 for What Name")
+        choice_code_2 = int(input("Choose your Code: "))
+        if choice_code_2 == 1:
+            hello()
+        elif choice_code_2 == 2:
+            goodbye()
+        elif choice_code_2 == 3:
+            input_name()
+        elif choice_code_2 == 4:
+            what_name()
+
 
 #Calculator
 def calculator():
@@ -166,5 +183,34 @@ def pair():
 #Verifys if the number is Pair
 def pair_calculator(num):
     return num % 2 == 0
+
+#Prints Hello, World
+def hello():
+    print("Hello, World")
+
+#Prints Goodbye, World
+def goodbye():
+    print("Goodbye, World")
+
+#Asks your name
+def input_name():
+    nome = input("What's your name? ")#Pergunta o Nome do Usuario
+    nome = nome.title().split()
+    nome(nome)
+
+#prints your name
+def nome(nome):
+    nome = "💜".join(nome)
+    print(nome)
+
+#Asks your name
+def what_name():
+    nome = input("Qual seu nome? ")
+    ola()
+    ola(nome )
+
+#Prints hello "Your name"
+def ola(para="Mundo"):
+    print("Olá", para.title())
 
 main()
