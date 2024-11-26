@@ -1,12 +1,14 @@
-#Escolha do tamanho
-def size_line():
-    print("What's the Pillar size?")
+#Size Choice
+def line():
+    print("What's the Line size?")
     size = int(input(""))
-    line(size)
+    make_line(size)
 
-def line(size):
+#Line Maker
+def make_line(size):
     while size >0:
-        print("?", end="")
+        print("🧱", end="")
         size -= 1
+    end="\n"
 
-size_line()
+line()
