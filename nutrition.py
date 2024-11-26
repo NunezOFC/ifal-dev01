@@ -1,4 +1,4 @@
-
+#shows the foods
 foods = [   
     {"name":"Maçã", "calorias":"52kcal", "gorduras":"0,2g", "carboidratos":"14g", "proteinas":"0,3g"},
     {"name":"Banana", "calorias":"89kcal", "gorduras":"0,3", "carboidratos":"23g", "proteinas":"1,1g"},
@@ -11,8 +11,8 @@ for  food in foods:
 
 #Asks which is the food
 def food():
-    print("What's your food? ")
-    choice = input("Qual o seu estudante? ")
+    print("Qual sua comida? ")
+    choice = input("")
     choice = choice.capitalize()
     tell_food(choice)
 
@@ -26,10 +26,12 @@ def tell_food(choice):
         print(f"Nome: {foods[2]['name']}, Calorias: {foods[2]['calorias']}, Gordura: {foods[2]['gorduras']}, Carboidratos {foods[2]['carboidratos']}, Proteínas {foods[2]['proteinas']}")
     elif choice =="Picanha":
         print(f"Nome: {foods[3]['name']}, Calorias: {foods[3]['calorias']}, Gordura: {foods[3]['gorduras']}, Carboidratos {foods[3]['carboidratos']}, Proteínas {foods[3]['proteinas']}")
+    rep()
 
 #Repeats
+def rep():
+    rep = input("Do you want another food? (y/n)")
+    if rep == "y":
+        food()
 
 food()
-
-
-
