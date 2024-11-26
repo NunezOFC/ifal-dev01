@@ -6,7 +6,7 @@ def size_pillar():
 
 def pillar(size):
     while size >0:
-        print("#")
+        print("⬆️")
         size -= 1
 
 size_pillar()
