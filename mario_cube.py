@@ -1,12 +1,14 @@
-#Escolha do tamanho
-def size_cube():
+#Size Choice
+def cube():
     print("What's the Cube size?")
     size = int(input(""))
-    cube(size)
+    make_cube(size)
 
-def cube(size):
+#Fazedor de Cubo
+def make_cube(size):
+    cube = size
     while size > 0:
-        print("#", end=(""))
+        print("🟪" * cube)
         size -=1
 
-size_cube()
+cube()
