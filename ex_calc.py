@@ -16,23 +16,23 @@ def sep(ex):
     ex = ex.split()
     size = len(ex)
     if size == 3:
-        cal3(ex, size)
+        cal3(ex)
     elif size == 5:
         cal5(ex, size)
 
 #Calculus
 def cal3(ex):
     if ex[1] == "+":
-        result = int(ex[0]) + int(ex[2])
+        result = float(ex[0]) + float(ex[2])
         print(f"The result of {ex[0]} + {ex[2]} = {result}")
     elif ex[1] == "-":
-        result = int(ex[0]) - int(ex[2])
+        result = float(ex[0]) - float(ex[2])
         print(f"The result of {ex[0]} - {ex[2]} = {result}")
     elif ex[1] == "*":
-        result = int(ex[0]) * int(ex[2])
+        result = float(ex[0]) * float(ex[2])
         print(f"The result of {ex[0]} x {ex[2]} = {result}")
     elif ex[1] == "/":
-        result = int(ex[0]) / int(ex[2])
+        result = float(ex[0]) / float(ex[2])
         print(f"The result of {ex[0]} / {ex[2]} = {result}")
 
 #Calculus
