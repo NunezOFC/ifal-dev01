@@ -21,13 +21,13 @@ def choice_food():
 def nutr_food(choice):
     for food in foods:
         if food["name"] == choice:
-            print("Nome:", food["name"], ",Calorias: ",food["calorias"], "Gorduras:", food["gorduras"], "Carboidratos:", food["carboidratos"], "Proteinas:", food["proteinas"])
+            print("Nome:", food["name"],", Calorias: ",food["calorias"], "Gorduras:",food["gorduras"], "Carboidratos:",food["carboidratos"], "Proteinas:",food["proteinas"])
     rep()
 
 #Repeats
 def rep():
     print("")
-    rep = input("Quer outra comida? (s/n)")
+    rep = input("Quer outra comida? (s/n) ")
     if rep == "s":
         choice_food()
 
