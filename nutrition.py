@@ -3,35 +3,32 @@ foods = [
     {"name":"Maçã", "calorias":"52kcal", "gorduras":"0,2g", "carboidratos":"14g", "proteinas":"0,3g"},
     {"name":"Banana", "calorias":"89kcal", "gorduras":"0,3", "carboidratos":"23g", "proteinas":"1,1g"},
     {"name":"Uva", "calorias":"67kcal", "gorduras":"0,4g", "carboidratos":"17g", "proteinas":"0,6g"},
-    {"name":"Picanha", "calorias":"325kcal", "gorduras":"26,7g", "carboidratos":"0g", "proteinas":"19,72g"}
+    {"name":"Picanha", "calorias":"325kcal", "gorduras":"26,7g", "carboidratos":"0g", "proteinas":"19,72g"},
+    {"name":"Frango", "calorias":"239kcal", "gorduras":"14g", "carboidratos":"0g", "proteinas":"27g"}
   ]
 
-for  food in foods:
-    print(food["name"], sep=", ")
+for  choice_food in foods:
+    print(choice_food["name"], sep=", ")
 
 #Asks which is the food
-def food():
+def choice_food():
     print("Qual sua comida? ")
     choice = input("")
     choice = choice.capitalize()
-    tell_food(choice)
+    nutr_food(choice)
 
 #Tells Nutrition of the Food
-def tell_food(choice):
-    if choice == "Maçã":
-        print(f"Nome: {foods[0]['name']}, Calorias: {foods[0]['calorias']}, Gordura: {foods[0]['gorduras']}, Carboidratos {foods[0]['carboidratos']}, Proteínas {foods[0]['proteinas']}")
-    elif choice =="Banana":
-        print(f"Nome: {foods[1]['name']}, Calorias: {foods[1]['calorias']}, Gordura: {foods[1]['gorduras']}, Carboidratos {foods[1]['carboidratos']}, Proteínas {foods[1]['proteinas']}")
-    elif choice =="Uva":
-        print(f"Nome: {foods[2]['name']}, Calorias: {foods[2]['calorias']}, Gordura: {foods[2]['gorduras']}, Carboidratos {foods[2]['carboidratos']}, Proteínas {foods[2]['proteinas']}")
-    elif choice =="Picanha":
-        print(f"Nome: {foods[3]['name']}, Calorias: {foods[3]['calorias']}, Gordura: {foods[3]['gorduras']}, Carboidratos {foods[3]['carboidratos']}, Proteínas {foods[3]['proteinas']}")
+def nutr_food(choice):
+    for food in foods:
+        if food["name"] == choice:
+            print("Nome:", food["name"], ",Calorias: ",food["calorias"], "Gorduras:", food["gorduras"], "Carboidratos:", food["carboidratos"], "Proteinas:", food["proteinas"])
     rep()
 
 #Repeats
 def rep():
-    rep = input("Do you want another food? (y/n)")
-    if rep == "y":
-        food()
+    print("")
+    rep = input("Quer outra comida? (s/n)")
+    if rep == "s":
+        choice_food()
 
-food()
+choice_food()
